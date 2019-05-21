@@ -1,16 +1,9 @@
 <h2><%= @task.title %></h2>
 <p><%= @task.details %></p>
-
-<ul>
-  <li>
-    <% if @task.completed == true %>
-      <input id="accept" name="accept" type="checkbox" checked="true" value="1" />
-      <% else%>
-      <input id="accept" name="accept" type="checkbox" value="1" />
-    <% end %>
-    <p>Task is completed !</p>
-  </li>
-</ul>
+<div class='inline-show'>
+  <input id="accept" name="accept" type="checkbox" <%= @task.completed == true ? 'checked' : '' %> value="1" />
+  <p>Task is completed !</p>
+</div>
 
 <%= link_to 'edit your task', edit_path(@task) %>
 

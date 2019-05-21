@@ -1,13 +1,1 @@
 <%= render 'form', task: @task %>
-
-<ul >
-  <li>
-    <% if @task.completed == true %>
-    <input id="accept" name="accept" type="checkbox" checked="true" value="1" />
-    <% else%>
-    <input id="accept" name="accept" type="checkbox" value="1" />
-    <% end %>
-    <p>completed</p>
-  </li>
-
-</ul>
